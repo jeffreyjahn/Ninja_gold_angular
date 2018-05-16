@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="tupac">
+  <h3>Total gold: {{gold}}</h3>
+  <button>Save</button>
+
+  <div class="events">
+    <h3>Farm</h3>
+    <h5>Earns 2-5 gold</h5>
+    <button (click)="farm()">Farm!</button>
+  </div>
+  <div class="events">
+    <h3>Cave</h3>
+    <h5>Earns 5-10 gold</h5>
+    <button (click)="cave()">Cave!</button>
+  </div>
+  <div class="events">
+    <h3>House</h3>
+    <h5>Earns 7-15 gold</h5>
+    <button (click)="house()">House!</button>
+  </div>
+  <div class="events">
+    <h3>Casino</h3>
+    <h5>Earn or lose up to 100 gold</h5>
+    <button (click)="casino()">Casino!</button>
+  </div>
+  <div id="logs">
+    <div *ngFor="let log of logs">
+      <p *ngIf="!log.gain" class="loss">{{log.action}}</p>
+      <p *ngIf="log.gain" class="gains">{{log.action}}</p>
+    </div>
+  </div>
+</div>
